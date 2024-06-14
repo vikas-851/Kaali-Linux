@@ -7,7 +7,7 @@ ENV NGROK_TOKEN=${NGROK_TOKEN}
 RUN apt install ssh wget unzip -y > /dev/null 2>&1
 RUN wget -O ngrok.zip https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.zip > /dev/null 2>&1
 RUN unzip ngrok.zip
-RUN echo "./ngrok config add-authtoken ${NGROK_TOKEN} &&" >>/daxx.sh
+RUN echo "./ngrok config add-authtoken 2hrMve1WF783jMcpSPLMezDLjNT_4XpPzQ6qrthQpX7rpqoUF &&" >>/daxx.sh
 RUN echo "./ngrok tcp 22 &>/dev/null &" >>/daxx.sh
 RUN mkdir /run/sshd
 RUN echo '/usr/sbin/sshd -D' >>/daxx.sh
